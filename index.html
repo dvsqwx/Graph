@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №4 — Характеристики та зв'язність графа</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<div id="top-bar">
+  <span id="lab-title">Лабораторна робота №4 — Характеристики та зв'язність графа</span>
+  <div id="controls">
+    <label for="variant-input">Варіант:</label>
+    <input type="text" id="variant-input" maxlength="4" placeholder="наприклад 4321">
+    <button id="build-btn">Побудувати</button>
+    <span class="sep">|</span>
+    <button id="prev-btn" disabled>◀ Назад</button>
+    <button id="next-btn" disabled>Вперед ▶</button>
+    <button id="auto-btn" disabled>Авто</button>
+    <span id="step-info"></span>
+  </div>
+  <div id="error-msg" style="display:none"></div>
+</div>
+
+<div id="main-layout">
+
+  <div id="left-panel">
+    <div id="output-area">
+      <p class="hint">Введіть 4-значний номер варіанту і натисніть «Побудувати».</p>
+    </div>
+  </div>
+
+  <div id="right-panel">
+
+    <div id="two-graphs" style="display:none">
+      <div class="canvas-block">
+        <div class="canvas-label">Орграф (напрямлений)</div>
+        <canvas id="canvas-dir" width="300" height="290"></canvas>
+      </div>
+      <div class="canvas-block">
+        <div class="canvas-label">Неорграф (ненапрямлений)</div>
+        <canvas id="canvas-undir" width="300" height="290"></canvas>
+      </div>
+    </div>
+
+    <div id="one-graph" style="display:none">
+      <div class="canvas-label" id="one-graph-label"></div>
+      <canvas id="canvas-main" width="600" height="290"></canvas>
+    </div>
+
+    <div id="log-panel">
+      <div id="log-title">Журнал виконання:</div>
+      <div id="log-content"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="matrix.js"></script>
+<script src="graph.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
